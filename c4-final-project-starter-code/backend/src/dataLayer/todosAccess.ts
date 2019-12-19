@@ -17,16 +17,7 @@ export class TodosAccess {
 
     async getAllTodos(userId: string): Promise<TodoItem[]> {
         console.log('Getting all todos')
-
-        const result = await this.docClient.scan({
-            TableName: this.todosTable,
-            FilterExpression: 'userId = :userId',
-            ExpressionAttributeValues: {
-                ':userId' : userId
-            }
-        }).promise()
-
-        /*
+        
         const result = await this.docClient.query({
             TableName: this.todosTable,
             IndexName: this.todosUserIndex,
@@ -35,7 +26,7 @@ export class TodosAccess {
                 ':userId' : userId
             }
         }).promise()
-        */
+        
         const items = result.Items
         return items as TodoItem[]
     }

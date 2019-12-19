@@ -272,6 +272,6 @@ Provide variables for the collection (similarly to how this was done in the cour
 
 
 # Deployed Server:
-This server has been deployed at https://nf7c0s2h76.execute-api.us-west-2.amazonaws.com/dev
+This server has been deployed at https://xom2zl1j78.execute-api.us-west-2.amazonaws.com/dev
 
 Please use this link to test the API!
