@@ -16,12 +16,12 @@ const createTodoHandler: APIGatewayProxyHandler = async (event: APIGatewayProxyE
   const jwtToken = split[1]
 
   const newTodo: CreateTodoRequest = JSON.parse(event.body)
-  const newItem = await createTodo(newTodo, jwtToken)
-
+  const item = await createTodo(newTodo, jwtToken)
+  console.log(item)
   return {
-    statusCode: 201,
+    statusCode: 200,
     body: JSON.stringify({
-      newItem
+      item: item
     })
   }
 }

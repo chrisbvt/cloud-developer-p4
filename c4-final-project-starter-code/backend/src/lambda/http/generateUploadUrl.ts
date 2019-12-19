@@ -39,9 +39,9 @@ const getUploadUrlHandler = middy(async (event: APIGatewayProxyEvent): Promise<A
   const url = getUploadUrl(id)
 
   return {
-    statusCode: 201,
+    statusCode: 200,
     body: JSON.stringify({
-      url
+      uploadUrl: url
     })
   }
 })

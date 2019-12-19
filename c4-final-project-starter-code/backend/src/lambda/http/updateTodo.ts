@@ -17,7 +17,7 @@ const updateTodoHandler: APIGatewayProxyHandler = async (event: APIGatewayProxyE
   await updateTodo(todoId, updatedTodo, jwtToken);
 
   return {
-    statusCode: 204,
+    statusCode: 200,
     body: ''
   };
 }
